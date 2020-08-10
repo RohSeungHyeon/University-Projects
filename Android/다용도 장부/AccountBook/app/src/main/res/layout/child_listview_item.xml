@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:weightSum="11">
+        <TableRow>
+            <TextView
+                android:id="@+id/cItem_Date"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:textColor="@color/childText"
+                android:background="@drawable/border_left"
+                android:fontFamily="@font/omnigothic_020"/>
+
+            <TextView
+                android:id="@+id/cItem_Count"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_weight="2"
+                android:gravity="right|center_vertical"
+                android:paddingRight="8dp"
+                android:textSize="12dp"
+                android:textColor="@color/childText"
+                android:background="@drawable/border"
+                android:fontFamily="@font/omnigothic_020"/>
+
+            <TextView
+                android:id="@+id/cItem_Income"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_weight="3"
+                android:gravity="right|center_vertical"
+                android:paddingRight="8dp"
+                android:textSize="12dp"
+                android:textColor="@color/incomeText"
+                android:background="@drawable/border"
+                android:fontFamily="@font/omnigothic_020"/>
+
+            <TextView
+                android:id="@+id/cItem_Outcome"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_weight="3"
+                android:gravity="right|center_vertical"
+                android:paddingRight="8dp"
+                android:textSize="12dp"
+                android:textColor="@color/outcomeText"
+                android:background="@drawable/border"
+                android:fontFamily="@font/omnigothic_020"/>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

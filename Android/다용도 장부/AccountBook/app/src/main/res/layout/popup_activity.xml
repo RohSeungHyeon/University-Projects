@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="#f5f5f5"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <!-- 타이틀바 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="항목 추가"
+            android:textSize="20dp"
+            android:textColor="#fff6f6"
+            android:gravity="center"
+            android:background="@color/colorPrimaryLight"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:fontFamily="@font/omnigothic_040"/>
+    </LinearLayout>
+    <!-- //end 타이틀바 -->
+
+    <!-- Notice -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/choiceMode"
+            android:paddingBottom="10dp" >
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:text="수입"
+                android:textSize="12dp"
+                android:id="@+id/income_select"
+                android:textColor="#1d1d1d"
+                android:fontFamily="@font/omnigothic_030"
+                android:button="@null"
+                android:drawableLeft="@drawable/radio_button_state"
+                android:drawablePadding="5dp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:text="지출"
+                android:textSize="12dp"
+                android:layout_marginLeft="24dp"
+                android:id="@+id/outcome_select"
+                android:textColor="#1d1d1d"
+                android:fontFamily="@font/omnigothic_030"
+                android:button="@null"
+                android:drawableLeft="@drawable/radio_button_state"
+                android:drawablePadding="5dp" />
+        </RadioGroup>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="날짜 입력: "
+                android:textColor="#202020"
+                android:fontFamily="@font/omnigothic_020" />
+            <EditText
+                android:id="@+id/date"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:textColor="#202020"
+                android:alpha="0.87"
+                android:focusable="false"
+                android:gravity="center"
+                android:onClick="openDatePicker"
+                android:layout_marginBottom="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/omnigothic_030" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="수량 입력: "
+                android:textColor="#202020"
+                android:fontFamily="@font/omnigothic_020" />
+
+            <EditText
+                android:id="@+id/count"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:textColor="#2d2d2d"
+                android:alpha="0.87"
+                android:gravity="center"
+                android:maxLength="5"
+                android:layout_marginBottom="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/omnigothic_030" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="단가 입력: "
+                android:textColor="#202020"
+                android:fontFamily="@font/omnigothic_020" />
+            <EditText
+                android:id="@+id/UnitPrice"
+                android:inputType="numberSigned"
+                android:textSize="12dp"
+                android:textColor="#2d2d2d"
+                android:alpha="0.87"
+                android:gravity="center"
+                android:onClick="onClick_selectInOut"
+                android:maxLength="9"
+                android:layout_marginBottom="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/omnigothic_030" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="총가 입력: "
+                android:textColor="#202020"
+                android:fontFamily="@font/omnigothic_020" />
+
+            <EditText
+                android:id="@+id/TotalPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:alpha="0.87"
+                android:gravity="center"
+                android:inputType="numberSigned"
+                android:maxLength="9"
+                android:onClick="onClick_selectInOut"
+                android:textColor="#2d2d2d"
+                android:textSize="12dp"
+                android:fontFamily="@font/omnigothic_030"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Notice -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#66bdbdbd" />
+
+    <!-- 닫기 버튼 -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:text="취소"
+            android:textSize="14dp"
+            android:textColor="@color/colorPrimaryLight"
+            android:padding="8dp"
+            android:gravity="center"
+            android:background="@drawable/popup_button_state"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:onClick="onClick_Close"
+            android:fontFamily="@font/omnigothic_030" />
+
+        <Button
+            android:text="확인"
+            android:textSize="14dp"
+            android:textColor="@color/colorPrimaryLight"
+            android:padding="8dp"
+            android:gravity="center"
+            android:background="@drawable/popup_button_state"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:onClick="onClick_Add"
+            android:fontFamily="@font/omnigothic_030" />
+    </LinearLayout>
+    <!--// 닫기 버튼 -->
+</LinearLayout>

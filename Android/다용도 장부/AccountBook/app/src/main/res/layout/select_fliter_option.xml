@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#f5f5f5"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="필터링 옵션 선택"
+            android:textSize="20dp"
+            android:textColor="#fff6f6"
+            android:gravity="center"
+            android:background="@color/colorPrimaryLight"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:fontFamily="@font/omnigothic_040" />
+    </LinearLayout>
+    <!-- 타이틀바 -->
+    <LinearLayout
+        android:padding="24dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="기간 선택: "
+                android:textSize="12dp"
+                android:layout_weight="0"
+                android:textColor="#202020"
+                android:fontFamily="@font/omnigothic_020"/>
+            <EditText
+                android:id="@+id/startdate"
+                android:focusable = "false"
+                android:textSize="12dp"
+                android:textColor="#2d2d2d"
+                android:alpha="0.87"
+                android:gravity="center"
+                android:layout_marginBottom="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="pickStartDate"
+                android:layout_weight="1"
+                android:fontFamily="@font/omnigothic_020"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" ~ "
+                android:textSize="12dp"
+                android:fontFamily="@font/omnigothic_030"/>
+            <EditText
+                android:id="@+id/enddate"
+                android:focusable = "false"
+                android:textSize="12dp"
+                android:textColor="#2d2d2d"
+                android:alpha="0.87"
+                android:gravity="center"
+                android:layout_marginBottom="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="pickEndDate"
+                android:layout_weight="1"
+                android:fontFamily="@font/omnigothic_020"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="항목 선택"
+            android:textSize="12dp"
+            android:textColor="#202020"
+            android:fontFamily="@font/omnigothic_020"
+            android:layout_marginBottom="6dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <ListView
+                android:id="@+id/select_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:choiceMode="multipleChoice"
+                android:background="@drawable/border_single">
+            </ListView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="전체 선택"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:onClick="checkAll"
+                android:textSize="12dp"
+                android:textColor="#202020"
+                android:fontFamily="@font/omnigothic_030"
+                android:background="@drawable/filter_all_button_state"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="선택 해제"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="checkClear"
+                android:textSize="12dp"
+                android:textColor="#202020"
+                android:fontFamily="@font/omnigothic_030"
+                android:background="@drawable/filter_all_button_state"/>
+        </LinearLayout>
+
+
+</LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="취소"
+            android:textSize="14dp"
+            android:textColor="@color/colorPrimary"
+            android:padding="8dp"
+            android:gravity="center"
+            android:background="@drawable/popup_button_state"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:onClick="onClick_NoFilter"
+            android:layout_weight="1"
+            android:fontFamily="@font/omnigothic_030" />
+
+        <Button
+            android:text="확인"
+            android:textSize="14dp"
+            android:textColor="@color/colorPrimary"
+            android:padding="8dp"
+            android:gravity="center"
+            android:background="@drawable/popup_button_state"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:onClick="onClick_FilterSet"
+            android:layout_weight="1"
+            android:fontFamily="@font/omnigothic_030" />
+    </LinearLayout>
+    <!--// 닫기 버튼 -->
+</LinearLayout>

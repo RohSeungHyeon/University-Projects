@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1241796721428420}
+  m_IsPrefabParent: 1
+--- !u!1 &1241796721428420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4408122806913268}
+  - component: {fileID: 114056792954049866}
+  m_Layer: 0
+  m_Name: DataContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4408122806913268
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1241796721428420}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114056792954049866
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1241796721428420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45168d24dd1b1c84d8e20bc13c3d8b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSprites:
+  - {fileID: 21300000, guid: 5d5e1561a78523e49934f7fb3d8f1843, type: 3}
+  - {fileID: 21300000, guid: da1ea41d615192146bf1785e106362c1, type: 3}
+  - {fileID: 21300000, guid: 78c9673093e584d43a8d66f9fab9baf0, type: 3}
+  - {fileID: 21300000, guid: a348bf2a9b58f1b46ba66184425d07e7, type: 3}
+  - {fileID: 21300000, guid: 9c7a65005a1f6024ab55a8b4b3b1b4f6, type: 3}
+  enemySprites:
+  - {fileID: 21300000, guid: 7c1d64eb3a59c544da8fd136baaffaf0, type: 3}
+  - {fileID: 21300000, guid: 901370f9872ff654eb4dd6e33aa45d0d, type: 3}
+  - {fileID: 21300000, guid: b1ca2e3695156414bac46aabaeb97876, type: 3}
+  - {fileID: 21300000, guid: 3ef76c5c322e572459585509c874491c, type: 3}
+  - {fileID: 21300000, guid: f486d1642f960ea41b03460d383c7c7c, type: 3}
+  maxStage: 9
+  requiredScoreRate: 1.3
+  requiredScoreForNext: 30
+  scorePerType: 020000000500000001000000020000000a000000
+  shotgunOneShotLimit: 5
+  baseBulletSpeed: 3
+  speedRatePerBulletType:
+  - 0.7
+  - 1
+  - 0.3
+  - 0.7
+  - 3
+  bulletSpeedIncreasingRate: 1.2

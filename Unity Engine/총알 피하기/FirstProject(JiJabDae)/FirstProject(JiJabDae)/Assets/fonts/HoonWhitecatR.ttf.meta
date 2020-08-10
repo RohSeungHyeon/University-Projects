@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 5f02afaec29b6994280806059b04e66e
+timeCreated: 1509553874
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: 1HoonWhitecat
+  fontNames:
+  - 1HoonWhitecat
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

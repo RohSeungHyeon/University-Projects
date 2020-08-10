@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="colorPrimary">#f86358</color>
+<color name="colorPrimaryDark">#af2729</color>
+<color name="colorAccent">#7ec6d0</color>
+<color name="colorPrimaryLight">#fa847b</color>
+<color name="colorPrimaryHardLight">#ffd2ce</color>
+    <color name="colorPrimarySHardLight">#ffe3e0</color>
+<color name="mainText">#871819</color>
+<color name="childText">#383838</color>
+<color name="mainViewBg">#fff6f6</color>
+<color name="transparent">#00000000</color>
+<color name="incomeText">#44baf1</color>
+    <color name="outcomeText">#ce3c3c</color>
+    <color name="totalIncomeText">#27a0d9</color>
+    <color name="totalOutcomeText">#a31d1d</color>
+</resources>

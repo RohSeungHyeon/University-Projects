@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:weightSum="11">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:textColor="#2e2e2e"
+                android:text="날짜"
+                android:layout_weight="3"
+                android:background="@drawable/border_static_left"
+                android:fontFamily="@font/omnigothic_040"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:textColor="#2e2e2e"
+                android:text="수량"
+                android:layout_weight="2"
+                android:background="@drawable/border_static"
+                android:fontFamily="@font/omnigothic_040"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:textColor="#2e2e2e"
+                android:text="수입"
+                android:layout_weight="3"
+                android:background="@drawable/border_static"
+                android:fontFamily="@font/omnigothic_040"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:textColor="#2e2e2e"
+                android:text="지출"
+                android:layout_weight="3"
+                android:background="@drawable/border_static"
+                android:fontFamily="@font/omnigothic_040"/>
+        </TableRow>
+    </TableLayout>
+
+    <FrameLayout   android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/abview_FL">
+
+        <ExpandableListView
+            android:id="@+id/MainListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:scrollbars="none" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom">
+
+            <Button
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:onClick="onClickAddCategory"
+                android:alpha="0.7"
+                android:layout_gravity="end"
+                android:layout_margin="14dp"
+                android:background="@drawable/bt_add_state"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:gravity="bottom"
+                android:id="@+id/abview_TL">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/border_static_left"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:text="총 수입"
+                        android:textSize="16dp"
+                        android:textColor="#2e2e2e"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/omnigothic_040"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/border_static"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:text="총 지출"
+                        android:textSize="16dp"
+                        android:textColor="#2e2e2e"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/omnigothic_040"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/border_static"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:text="순이익"
+                        android:textSize="16dp"
+                        android:textColor="#2e2e2e"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/omnigothic_040"/>
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/edit_TotalIncome"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/border_static_left_light"
+                        android:gravity="right|center_vertical"
+                        android:layout_weight="1"
+                        android:textSize="18dp"
+                        android:textColor="#404040"
+                        android:paddingRight="8dp"
+                        android:fontFamily="@font/omnigothic_020"/>
+
+                    <TextView
+                        android:id="@+id/edit_TotalOutcome"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/border_static_light"
+                        android:gravity="right|center_vertical"
+                        android:layout_weight="1"
+                        android:textSize="18dp"
+                        android:textColor="#404040"
+                        android:paddingRight="8dp"
+                        android:fontFamily="@font/omnigothic_020"/>
+
+                    <TextView
+                        android:id="@+id/edit_Profit"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/border_static_light"
+                        android:gravity="right|center_vertical"
+                        android:layout_weight="1"
+                        android:textSize="18dp"
+                        android:textColor="#404040"
+                        android:paddingRight="8dp"
+                        android:fontFamily="@font/omnigothic_020"/>
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>
